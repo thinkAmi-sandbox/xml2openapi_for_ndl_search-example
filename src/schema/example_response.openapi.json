@@ -4,7 +4,59 @@
 		"title": "SearchRetrieveResponse",
 		"version": "1.0.0"
 	},
-	"paths": {},
+	"paths": {
+		"/api/sru": {
+			"get": {
+				"operationId": "searchRetrieve",
+				"summary": "SRU検索を実行する",
+				"parameters": [
+					{
+						"name": "operation",
+						"in": "query",
+						"required": true,
+						"description": "searchRetrieve 固定",
+						"schema": {
+							"type": "string",
+							"const": "searchRetrieve"
+						}
+					},
+					{
+						"name": "maximumRecords",
+						"in": "query",
+						"required": true,
+						"description": "取得件数の固定値",
+						"schema": {
+							"type": "number",
+							"const": 10
+						}
+					},
+					{
+						"name": "query",
+						"in": "query",
+						"required": true,
+						"description": "title もしくは isbn の単一条件",
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"pattern": "^(title=\\\".+\\\"|isbn=\\\"(\\\\d{10}|\\\\d{13})\\\")$"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/xml": {
+								"schema": {
+									"$ref": "#/components/schemas/SearchRetrieveResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
 	"components": {
 		"schemas": {
 			"SearchRetrieveResponse": {
