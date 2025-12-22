@@ -4,18 +4,18 @@
 TBD - created by archiving change add-json-typescript-types. Update Purpose after archive.
 ## Requirements
 ### Requirement: quicktype による型生成
-システムは `openspec/example_response.json` を quicktype で TypeScript 型定義に変換しなければならない（SHALL）。
+システムはXMLから得たJSONデータを入力として quicktype で TypeScript 型定義に変換しなければならない（SHALL）。
 
 #### Scenario: JSONから型生成
-- **WHEN** `openspec/example_response.json` を入力する
+- **WHEN** XMLから変換したJSONデータを入力する
 - **THEN** TypeScript の型定義が生成される
 
 ### Requirement: 出力先の固定
-システムは生成された型定義を `src/types/example_response.ts` に出力しなければならない（SHALL）。
+システムは生成された型定義をファイルに保存せず、メモリ上で後続処理へ渡さなければならない（SHALL）。
 
-#### Scenario: 出力ファイル
+#### Scenario: メモリ受け渡し
 - **WHEN** 型定義が生成される
-- **THEN** `src/types/example_response.ts` が上書きされる
+- **THEN** ファイル出力は行わず、メモリ上で保持される
 
 ### Requirement: type 形式の出力
 システムは quicktype の出力を `type` 形式で生成しなければならない（SHALL）。

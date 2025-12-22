@@ -4,10 +4,10 @@
 TBD - created by archiving change add-typescript-json-schema. Update Purpose after archive.
 ## Requirements
 ### Requirement: typia によるスキーマ生成
-システムは typia を利用して TypeScript 型定義から OpenAPI v3.1 互換のスキーマコレクションを生成しなければならない（SHALL）。
+システムはメモリ上の TypeScript 型定義を入力として typia で OpenAPI v3.1 互換のスキーマコレクションを生成しなければならない（SHALL）。
 
 #### Scenario: v3.1 スキーマ生成
-- **WHEN** `src/types/example_response.ts` を入力する
+- **WHEN** 生成済みの TypeScript 型定義を入力する
 - **THEN** v3.1 互換のスキーマコレクションが生成される
 
 ### Requirement: 単一スキーマの抽出
@@ -18,18 +18,18 @@ TBD - created by archiving change add-typescript-json-schema. Update Purpose aft
 - **THEN** `components.schemas.SearchRetrieveResponse` が単一スキーマとして取り出される
 
 ### Requirement: 出力先の固定
-システムは抽出したJSON Schemaを `src/schema/example_response.schema.json` に出力しなければならない（SHALL）。
+システムは抽出したJSON Schemaをファイルに保存せず、メモリ上で後続処理へ渡さなければならない（SHALL）。
 
-#### Scenario: 出力ファイル
+#### Scenario: メモリ受け渡し
 - **WHEN** JSON Schemaが生成される
-- **THEN** `src/schema/example_response.schema.json` が上書きされる
+- **THEN** ファイル出力は行わず、メモリ上で保持される
 
 ### Requirement: スキーマコレクションの保存
-システムは生成したスキーマコレクションを `src/schema/example_response.collection.json` に出力しなければならない（SHALL）。
+システムは生成したスキーマコレクションをファイルに保存せず、メモリ上で保持しなければならない（SHALL）。
 
-#### Scenario: コレクション出力
+#### Scenario: コレクションの保持
 - **WHEN** スキーマコレクションが生成される
-- **THEN** `src/schema/example_response.collection.json` が上書きされる
+- **THEN** ファイル出力は行わず、メモリ上で保持される
 
 ### Requirement: 変換パイプラインの整合
 システムは `@openapi-contrib/json-schema-to-openapi-schema` が扱いやすい形式で単一JSON Schemaを出力しなければならない（SHALL）。

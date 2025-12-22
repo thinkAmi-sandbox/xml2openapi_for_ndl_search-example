@@ -4,7 +4,7 @@
 TBD - created by archiving change add-openapi-client-generation. Update Purpose after archive.
 ## Requirements
 ### Requirement: OpenAPI からのクライアント生成
-システムは `src/schema/example_response.openapi.json` を入力として `@hey-api/openapi-ts` により TypeScript クライアントを生成しなければならない（SHALL）。
+システムはメモリ上の OpenAPI 3.1 ドキュメントを入力として `@hey-api/openapi-ts` により TypeScript クライアントを生成しなければならない（SHALL）。
 
 #### Scenario: クライアント生成
 - **WHEN** OpenAPI クライアント生成を実行する
@@ -36,9 +36,9 @@ TBD - created by archiving change add-openapi-client-generation. Update Purpose 
 - **THEN** `src/client/` に生成物が保存される
 
 ### Requirement: 実行形態の限定
-システムはクライアント生成を内部スクリプトとして提供し、CLI 統合は行わない（SHALL）。
+システムはクライアント生成をCLIから呼び出せる内部処理として提供しなければならない（SHALL）。
 
-#### Scenario: スクリプト実行
-- **WHEN** クライアント生成を行う
-- **THEN** スクリプト実行のみで完結する
+#### Scenario: CLI 統合
+- **WHEN** `xml2dcclient` を実行する
+- **THEN** クライアント生成処理がCLIの一部として実行される
 

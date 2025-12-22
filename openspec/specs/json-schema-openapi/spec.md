@@ -4,7 +4,7 @@
 TBD - created by archiving change add-json-schema-openapi. Update Purpose after archive.
 ## Requirements
 ### Requirement: JSON Schema から OpenAPI 3.1 への変換
-システムは `src/schema/example_response.schema.json` を入力として OpenAPI 3.1 形式のスキーマへ変換しなければならない（SHALL）。
+システムはメモリ上のJSON Schemaを入力として OpenAPI 3.1 形式のスキーマへ変換しなければならない（SHALL）。
 
 #### Scenario: 変換実行
 - **WHEN** JSON Schema 変換を実行する
@@ -18,11 +18,11 @@ TBD - created by archiving change add-json-schema-openapi. Update Purpose after 
 - **THEN** 必須セクションが含まれている
 
 ### Requirement: 出力形式の固定
-システムは出力する OpenAPI 3.1 ドキュメントを JSON 形式で保存しなければならない（SHALL）。
+システムは出力する OpenAPI 3.1 ドキュメントを JSON 形式のデータとして保持しなければならない（SHALL）。
 
 #### Scenario: JSON 形式
 - **WHEN** OpenAPI スキーマを出力する
-- **THEN** JSON 形式として保存される
+- **THEN** JSON 形式として扱える
 
 ### Requirement: 参照形式の正規化
 システムは変換後の参照が `#/components/schemas/...` 形式で解決できるよう正規化しなければならない（SHALL）。
@@ -32,9 +32,9 @@ TBD - created by archiving change add-json-schema-openapi. Update Purpose after 
 - **THEN** `#/components/schemas/...` で参照できる
 
 ### Requirement: 出力先の固定
-システムは OpenAPI 3.1 形式の出力を `src/schema/example_response.openapi.json` に保存しなければならない（SHALL）。
+システムは OpenAPI 3.1 形式の出力をファイルに保存せず、メモリ上で後続処理へ渡さなければならない（SHALL）。
 
-#### Scenario: 出力ファイル
+#### Scenario: メモリ受け渡し
 - **WHEN** 変換が完了する
-- **THEN** `src/schema/example_response.openapi.json` が上書きされる
+- **THEN** ファイル出力は行わず、メモリ上で保持される
 

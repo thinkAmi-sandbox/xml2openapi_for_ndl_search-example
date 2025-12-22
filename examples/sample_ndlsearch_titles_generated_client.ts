@@ -1,6 +1,6 @@
 import { createClient, createConfig } from "../src/client/client";
-import { parseSruXml } from "../src/xml/parseSruXml";
 import type { SruRecord } from "../src/xml/parseSruXml";
+import { parseSruXml } from "../src/xml/parseSruXml";
 
 const sleep = (ms: number) =>
 	new Promise<void>((resolve) => {

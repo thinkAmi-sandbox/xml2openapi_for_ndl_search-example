@@ -17,4 +17,4 @@ XMLレスポンスを安定したJSON形に変換し、後段の型生成とOpen
 - `searchRetrieveResponse.records.record.recordData.dc.subject`
 
 ## 生成例
-`scripts/convert-example.ts` により `openspec/example_response.xml` を `openspec/example_response.json` に変換する。
+`xml2dcclient` の内部で `openspec/example_response.xml` を読み取り、JSONへ変換する。

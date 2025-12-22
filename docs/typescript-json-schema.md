@@ -4,9 +4,8 @@
 TypeScript 型定義から JSON Schema を生成し、OpenAPI 3.1 変換の前段として利用する。
 
 ## 入力と出力
-- 入力: `src/types/example_response.ts`
-- 出力（コレクション）: `src/schema/example_response.collection.json`（常時上書き）
-- 出力（単一スキーマ）: `src/schema/example_response.schema.json`（常時上書き）
+- 入力: CLI内で生成したTypeScript型定義
+- 出力: メモリ上のJSON Schema（ファイル出力は行わない）
 
 ## 生成方針
 - typia の `typia.json.schemas<..., "3.1">()` で v3.1 互換スキーマコレクションを生成する
@@ -15,8 +14,4 @@ TypeScript 型定義から JSON Schema を生成し、OpenAPI 3.1 変換の前�
 - 単一スキーマに `$schema: "https://json-schema.org/draft/2020-12/schema"` を付与する
 
 ## 実行手順
-`ts-node` 経由で以下を実行する（typia の transformer はスクリプト内で適用する）。
-
-```bash
-./node_modules/.bin/ts-node scripts/convert-types-to-schema.ts
-```
+この処理は `xml2dcclient` の内部で実行されるため、単体の手動実行は不要。
