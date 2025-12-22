@@ -1,5 +1,5 @@
-import { client } from "./client/client.gen";
-import { parseXmlToJson } from "./xml/parseXml";
+import { createSruClient } from "../src/ndlsearch/createSruClient";
+import type { SruRecord } from "../src/xml/parseSruXml";
 
 const sleep = (ms: number) =>
 	new Promise<void>((resolve) => {
@@ -8,46 +8,26 @@ const sleep = (ms: number) =>
 
 const fetchTitles = async () => {
 	const query = 'title="桜"';
-	const xml = await client.get({
+	const client = createSruClient();
+	const data = (await client.get({
 		url: "/api/sru",
 		query: {
 			operation: "searchRetrieve",
 			maximumRecords: 10,
 			query,
 		},
-		parseAs: "text",
 		responseStyle: "data",
-	});
-
-	if (typeof xml !== "string") {
-		throw new Error("Expected XML response as text.");
-	}
-
-	const parsed = parseXmlToJson(xml) as {
+	})) as {
 		searchRetrieveResponse?: {
 			records?: {
-				record?: Array<{
-					recordData?: string;
-				}>;
+				record?: SruRecord[];
 			};
 		};
 	};
 
-	const records = parsed.searchRetrieveResponse?.records?.record ?? [];
+	const records = data.searchRetrieveResponse?.records?.record ?? [];
 	const titles = records
-		.map((record) => {
-			if (!record.recordData) {
-				return undefined;
-			}
-
-			const inner = parseXmlToJson(record.recordData) as {
-				dc?: {
-					title?: string;
-				};
-			};
-
-			return inner.dc?.title;
-		})
+		.map((record) => record.recordData?.dc?.title)
 		.filter((title): title is string => Boolean(title));
 
 	for (const title of titles) {

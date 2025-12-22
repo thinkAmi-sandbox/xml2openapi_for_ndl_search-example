@@ -17,6 +17,10 @@ TBD - created by archiving change add-openapi-client-generation. Update Purpose 
 - **WHEN** クライアント生成を行う
 - **THEN** fetch を前提としたコードが出力される
 
+#### Scenario: レスポンス変換
+- **WHEN** XMLレスポンスを受け取る
+- **THEN** `responseTransformer` によりパース済みデータが返る
+
 ### Requirement: ベースURLの固定
 システムは生成するクライアントのベースURLを `https://ndlsearch.ndl.go.jp/api/sru` に固定しなければならない（SHALL）。
 

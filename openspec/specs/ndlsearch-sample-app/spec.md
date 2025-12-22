@@ -24,9 +24,9 @@ TBD - created by archiving change add-ndlsearch-sample-app. Update Purpose after
 - **WHEN** JSON を処理する
 - **THEN** 取得した title がすべて表示される
 
-#### Scenario: 内部XMLの解釈
-- **WHEN** `recordData` が XML 文字列として返る
-- **THEN** 内部XMLをパースして title を抽出する
+#### Scenario: SRU専用パーサーの利用
+- **WHEN** SRUレスポンスを処理する
+- **THEN** SRU専用パーサーの結果から title を抽出する
 
 ### Requirement: 実行形態の固定
 システムはサンプル実装を `ts-node` で実行できる形で提供しなければならない（SHALL）。
