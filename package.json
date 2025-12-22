@@ -1,4 +1,7 @@
 {
+	"bin": {
+		"xml2dcclient": "./src/cli/xml2dcclient.ts"
+	},
 	"scripts": {
 		"prepare": "ts-patch install"
 	},
@@ -7,6 +10,7 @@
 		"commander": "^14.0.2",
 		"fast-xml-parser": "^5.3.3",
 		"quicktype": "^23.2.6",
+		"quicktype-core": "^23.2.6",
 		"ts-json-schema-generator": "^2.4.0",
 		"typia": "^10.1.0"
 	},

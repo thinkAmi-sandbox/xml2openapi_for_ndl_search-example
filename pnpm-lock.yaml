@@ -20,6 +20,9 @@ importers:
       quicktype:
         specifier: ^23.2.6
         version: 23.2.6
+      quicktype-core:
+        specifier: ^23.2.6
+        version: 23.2.6
       ts-json-schema-generator:
         specifier: ^2.4.0
         version: 2.4.0

@@ -15,7 +15,7 @@ TypeScript 型定義から JSON Schema を生成し、OpenAPI 3.1 変換の前�
 - 単一スキーマに `$schema: "https://json-schema.org/draft/2020-12/schema"` を付与する
 
 ## 実行手順
-`ts-patch` による transformer が有効になっていることを確認したうえで、`ts-node` 経由で以下を実行する。
+`ts-node` 経由で以下を実行する（typia の transformer はスクリプト内で適用する）。
 
 ```bash
 ./node_modules/.bin/ts-node scripts/convert-types-to-schema.ts

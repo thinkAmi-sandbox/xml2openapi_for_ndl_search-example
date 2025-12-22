@@ -23,8 +23,8 @@ export type Records = {
 };
 
 export type Record = {
-    recordSchema: string;
-    recordPacking: string;
+    recordSchema: 'info:srw/schema/1/dc-v1.1';
+    recordPacking: 'string';
     recordData: RecordData;
     recordPosition: number;
 };
@@ -36,36 +36,9 @@ export type RecordData = {
 export type Dc = {
     title: string;
     subject?: Array<string>;
-    language: string;
+    language: Language;
     attr_schemaLocation: string;
     creator?: string;
 };
 
-export type SearchRetrieveData = {
-    body?: never;
-    path?: never;
-    query: {
-        /**
-         * searchRetrieve 固定
-         */
-        operation: 'searchRetrieve';
-        /**
-         * 取得件数の固定値
-         */
-        maximumRecords: 10;
-        /**
-         * title もしくは isbn の単一条件
-         */
-        query: string;
-    };
-    url: '/api/sru';
-};
-
-export type SearchRetrieveResponses = {
-    /**
-     * OK
-     */
-    200: SearchRetrieveResponse;
-};
-
-export type SearchRetrieveResponse2 = SearchRetrieveResponses[keyof SearchRetrieveResponses];
+export type Language = 'ja' | 'jpn';

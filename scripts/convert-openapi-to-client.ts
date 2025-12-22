@@ -16,7 +16,7 @@ const run = async () => {
 			},
 			{
 				name: "@hey-api/client-fetch",
-				baseUrl: "https://ndlsearch.ndl.go.jp",
+				baseUrl: "https://ndlsearch.ndl.go.jp/api/sru",
 			},
 		],
 	});
