@@ -1,0 +1,14 @@
+{
+	"files": {
+		"includes": [
+			"**/*",
+			"!!**/node_modules",
+			"!!**/.pnpm-store",
+			"!!**/.devcontainer",
+			"!!**/.idea",
+			"!!**/openspec/example_response.xml",
+			"!!**/openspec/example_response.json",
+			"!!**/openspec/ndlsearch_api_20250326.pdf"
+		]
+	}
+}

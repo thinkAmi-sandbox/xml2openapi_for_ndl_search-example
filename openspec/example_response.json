@@ -1,0 +1,152 @@
+{
+  "searchRetrieveResponse": {
+    "version": 1.2,
+    "numberOfRecords": 10520,
+    "nextRecordPosition": 11,
+    "records": {
+      "record": [
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アーティストの表現として見るアートプロジェクトの意義について─東京都立川市における「おやこ・de・アート展」in 立川の実践を事例に─",
+              "subject": [
+                "アートプロジェクト",
+                "アーティスト",
+                "現代アート",
+                "アール・ブリュット",
+                "市民活動",
+                "アートプロジェクト",
+                "アーティスト",
+                "現代アート",
+                "アール・ブリュット",
+                "市民活動"
+              ],
+              "language": "ja",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 1
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 クラシック 東京・春・音楽祭2020 : 来春、5週間連続で豪華な祭典 東京・上野の桜の森で堪能",
+              "creator": "梅津 時比古",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 2
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 初代国立劇場さよなら公演 通し狂言 義経千本桜 : 身体を駆使した多彩な演出 尾上菊之助の主要三役で堪能",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 3
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 東京・春・音楽祭2025 : ワーグナー、そしてプッチーニ 桜が包む上野の森で音の饗宴",
+              "creator": "梅津 時比古",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 4
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 通し狂言 義経千本桜 : 人形浄瑠璃から入ってきた名作 源平の後日譚を三部制で上演",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 5
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 舞台 吉例顔見世大歌舞伎 義経千本桜 川連法眼館 二役の変わり身、動きに注目 中村獅童、思い出の演目に再挑戦",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 6
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 舞台 通し狂言 星合世十三團(ほしあわせじゅうさんだん) 成田千本桜 善人、悪人、二枚目に狐…… 市川海老蔵、主要十三役に挑戦",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 7
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 舞台 通し狂言 義経千本桜(よしつねせんぼんざくら) : 三月、三大名作、主要三役 花形俳優・尾上菊之助が挑戦",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 8
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 舞台 二月大歌舞伎 : 初世尾上辰之助三十三回忌追善狂言 : 「義経千本桜」「名月八幡祭」で尾上松緑が父のあたり役に挑む",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 9
+        },
+        {
+          "recordSchema": "info:srw/schema/1/dc-v1.1",
+          "recordPacking": "string",
+          "recordData": {
+            "dc": {
+              "title": "アートな時間 六月大歌舞伎 桜姫東文章(さくらひめあずまぶんしょう) 下の巻 : 転落と流転と悪事と三者がからみ合う南北の人気作",
+              "creator": "小玉 祥子",
+              "language": "jpn",
+              "attr_schemaLocation": "info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"
+            }
+          },
+          "recordPosition": 10
+        }
+      ]
+    }
+  }
+}

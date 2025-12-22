@@ -1,0 +1,113 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"searchRetrieveResponse": {
+			"$ref": "#/$defs/SearchRetrieveResponseClass"
+		}
+	},
+	"required": ["searchRetrieveResponse"],
+	"$defs": {
+		"SearchRetrieveResponse": {
+			"type": "object",
+			"properties": {
+				"searchRetrieveResponse": {
+					"$ref": "#/$defs/SearchRetrieveResponseClass"
+				}
+			},
+			"required": ["searchRetrieveResponse"]
+		},
+		"SearchRetrieveResponseClass": {
+			"type": "object",
+			"properties": {
+				"version": {
+					"type": "number"
+				},
+				"numberOfRecords": {
+					"type": "number"
+				},
+				"nextRecordPosition": {
+					"type": "number"
+				},
+				"records": {
+					"$ref": "#/$defs/Records"
+				}
+			},
+			"required": [
+				"version",
+				"numberOfRecords",
+				"nextRecordPosition",
+				"records"
+			]
+		},
+		"Records": {
+			"type": "object",
+			"properties": {
+				"record": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/Record"
+					}
+				}
+			},
+			"required": ["record"]
+		},
+		"Record": {
+			"type": "object",
+			"properties": {
+				"recordSchema": {
+					"type": "string"
+				},
+				"recordPacking": {
+					"type": "string"
+				},
+				"recordData": {
+					"$ref": "#/$defs/RecordData"
+				},
+				"recordPosition": {
+					"type": "number"
+				}
+			},
+			"required": [
+				"recordSchema",
+				"recordPacking",
+				"recordData",
+				"recordPosition"
+			]
+		},
+		"RecordData": {
+			"type": "object",
+			"properties": {
+				"dc": {
+					"$ref": "#/$defs/Dc"
+				}
+			},
+			"required": ["dc"]
+		},
+		"Dc": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "string"
+				},
+				"subject": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"language": {
+					"type": "string"
+				},
+				"attr_schemaLocation": {
+					"type": "string"
+				},
+				"creator": {
+					"type": "string"
+				}
+			},
+			"required": ["title", "language", "attr_schemaLocation"]
+		}
+	},
+	"title": "SearchRetrieveResponse"
+}

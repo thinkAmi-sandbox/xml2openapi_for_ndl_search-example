@@ -1,0 +1,68 @@
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/">
+    <version>1.2</version>
+    <numberOfRecords>10520</numberOfRecords>
+    <nextRecordPosition>11</nextRecordPosition>
+    <extraResponseData> <facets> <lst name="REPOSITORY_NO"> <int name="R100000002">4438</int> <int name="R000000004">3109</int> <int name="R100000136">1478</int> <int name="R100000001">564</int> <int name="R000000025">325</int> <int name="R100000137">246</int> <int name="R100000094">112</int> <int name="R100000038">88</int> <int name="R000000054">61</int> <int name="R100000039">55</int> <int name="R000000016">16</int> <int name="R100000134">9</int> <int name="R100000128">7</int> <int name="R100000138">6</int> <int name="R100000049">3</int> <int name="R100000073">2</int> <int name="R100000097">1</int> </lst> <lst name="NDC"> <int name="+">9</int> <int name="0">45</int> <int name="1">45</int> <int name="2">438</int> <int name="3">205</int> <int name="4">133</int> <int name="5">40</int> <int name="6">51</int> <int name="7">570</int> <int name="8">9</int> <int name="9">993</int> <int name="A">12</int> <int name="E">3</int> <int name="H">2</int> <int name="K">25</int> <int name="M">1</int> <int name="N">2</int> <int name="S">4</int> <int name="T">10</int> <int name="２">6</int> <int name="３">6</int> <int name="４">1</int> <int name="６">1</int> <int name="７">5</int> <int name="９">10</int> <int name="ｴ">10</int> </lst> <lst name="ISSUED_DATE"> <int name="1900">7</int> <int name="1951">1</int> <int name="1952">1</int> <int name="1959">2</int> <int name="1960">1</int> <int name="1961">1</int> <int name="1962">1</int> <int name="1963">1</int> <int name="1964">1</int> <int name="1965">2</int> <int name="1966">2</int> <int name="1967">2</int> <int name="1968">2</int> <int name="1969">1</int> <int name="1970">3</int> <int name="1971">3</int> <int name="1972">1</int> <int name="1973">4</int> <int name="1974">4</int> <int name="1975">3</int> <int name="1976">2</int> <int name="1977">3</int> <int name="1978">4</int> <int name="1979">4</int> <int name="1980">6</int> <int name="1981">5</int> <int name="1982">6</int> <int name="1983">7</int> <int name="1984">6</int> <int name="1985">8</int> <int name="1986">8</int> <int name="1987">8</int> <int name="1988">8</int> <int name="1989">8</int> <int name="1990">10</int> <int name="1991">11</int> <int name="1992">10</int> <int name="1993">9</int> <int name="1994">10</int> <int name="1995">11</int> <int name="1996">12</int> <int name="1997">12</int> <int name="1998">16</int> <int name="1999">13</int> <int name="2000">17</int> <int name="2001">12</int> <int name="2002">15</int> <int name="2003">16</int> <int name="2004">13</int> <int name="2005">16</int> </lst> <lst name="LIBRARY"> <int name="国立国会図書館">7542</int> <int name="さいたま市立中央図書館">565</int> <int name="横浜市立図書館">502</int> <int name="堺市立中央図書館">501</int> <int name="長崎県立長崎図書館">500</int> <int name="サピエ図書館">491</int> <int name="大阪市立図書館">487</int> <int name="静岡市立中央図書館">459</int> <int name="岡山県立図書館">424</int> <int name="広島市立中央図書館">414</int> <int name="東京都立中央図書館">406</int> <int name="大阪府立中央図書館">373</int> <int name="札幌市中央図書館">358</int> <int name="石川県立図書館">354</int> <int name="滋賀県立図書館">342</int> <int name="川崎市立図書館">316</int> <int name="千葉市中央図書館">291</int> <int name="相模原市立図書館">271</int> <int name="名古屋市図書館">264</int> <int name="福岡市総合図書館">254</int> <int name="秋田県立図書館">252</int> <int name="茨城県立図書館">252</int> <int name="福岡県立図書館">224</int> <int name="和歌山県立図書館">218</int> <int name="高知県立図書館">215</int> <int name="福井県立図書館">200</int> <int name="大分県立図書館">197</int> <int name="徳島県立図書館">192</int> <int name="香川県立図書館">192</int> <int name="佐賀県立図書館">184</int> <int name="山梨県立図書館">175</int> <int name="富山県立図書館">173</int> <int name="鹿児島県立図書館">169</int> <int name="島根県立図書館">166</int> <int name="静岡県立中央図書館">165</int> <int name="大阪府立中央図書館国際児童文学館">160</int> <int name="山口県立山口図書館">159</int> <int name="新潟県立図書館">155</int> <int name="京都府立図書館">154</int> <int name="青森県立図書館">153</int> <int name="広島県立図書館">149</int> <int name="宮城県図書館">145</int> <int name="北海道立図書館">138</int> <int name="群馬県立図書館">134</int> <int name="岐阜県図書館">128</int> <int name="山形県立図書館">123</int> <int name="愛知県図書館">123</int> <int name="福島県立図書館">123</int> <int name="奈良県立図書情報館">116</int> <int name="神奈川県立図書館">109</int> </lst> </facets> </extraResponseData>
+    <records>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アーティストの表現として見るアートプロジェクトの意義について─東京都立川市における「おやこ・de・アート展」in 立川の実践を事例に─</dc:title> <dc:subject>アートプロジェクト</dc:subject><dc:subject>アーティスト</dc:subject><dc:subject>現代アート</dc:subject><dc:subject>アール・ブリュット</dc:subject><dc:subject>市民活動</dc:subject><dc:subject>アートプロジェクト</dc:subject><dc:subject>アーティスト</dc:subject><dc:subject>現代アート</dc:subject><dc:subject>アール・ブリュット</dc:subject><dc:subject>市民活動</dc:subject> <dc:language>ja</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>1</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 クラシック 東京・春・音楽祭2020 : 来春、5週間連続で豪華な祭典 東京・上野の桜の森で堪能</dc:title> <dc:creator>梅津 時比古</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>2</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 初代国立劇場さよなら公演 通し狂言 義経千本桜 : 身体を駆使した多彩な演出 尾上菊之助の主要三役で堪能</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>3</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 東京・春・音楽祭2025 : ワーグナー、そしてプッチーニ 桜が包む上野の森で音の饗宴</dc:title> <dc:creator>梅津 時比古</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>4</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 通し狂言 義経千本桜 : 人形浄瑠璃から入ってきた名作 源平の後日譚を三部制で上演</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>5</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 舞台 吉例顔見世大歌舞伎 義経千本桜 川連法眼館 二役の変わり身、動きに注目 中村獅童、思い出の演目に再挑戦</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>6</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 舞台 通し狂言 星合世十三團(ほしあわせじゅうさんだん) 成田千本桜 善人、悪人、二枚目に狐…… 市川海老蔵、主要十三役に挑戦</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>7</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 舞台 通し狂言 義経千本桜(よしつねせんぼんざくら) : 三月、三大名作、主要三役 花形俳優・尾上菊之助が挑戦</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>8</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 舞台 二月大歌舞伎 : 初世尾上辰之助三十三回忌追善狂言 : 「義経千本桜」「名月八幡祭」で尾上松緑が父のあたり役に挑む</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>9</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>アートな時間 六月大歌舞伎 桜姫東文章(さくらひめあずまぶんしょう) 下の巻 : 転落と流転と悪事と三者がからみ合う南北の人気作</dc:title> <dc:creator>小玉 祥子</dc:creator> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>10</recordPosition>
+        </record>
+    </records>
+</searchRetrieveResponse>

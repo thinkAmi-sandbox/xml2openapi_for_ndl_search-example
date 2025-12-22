@@ -1,0 +1,15 @@
+{
+  "name": "xml2openapi",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24-trixie",
+  "mounts": [
+    "source=${localEnv:HOME}/.agent/codex/.codex,target=/home/node/.codex,type=bind,consistency=cached"
+  ],
+  "postStartCommand": ".devcontainer/postStartCommand.sh",
+  "customizations": {
+    "jetbrains": {
+      "plugins": [
+        "com.github.biomejs.intellijbiome"
+      ]
+    }
+  }
+}
