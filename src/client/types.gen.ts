@@ -14,7 +14,6 @@ export type SearchRetrieveResponse = {
 export type SearchRetrieveResponseClass = {
     version: number;
     numberOfRecords: number;
-    nextRecordPosition: number;
     records: Records;
 };
 
@@ -23,8 +22,8 @@ export type Records = {
 };
 
 export type Record = {
-    recordSchema: 'info:srw/schema/1/dc-v1.1';
-    recordPacking: 'string';
+    recordSchema: string;
+    recordPacking: string;
     recordData: RecordData;
     recordPosition: number;
 };
@@ -35,10 +34,9 @@ export type RecordData = {
 
 export type Dc = {
     title: string;
-    subject?: Array<string>;
-    language: Language;
-    attr_schemaLocation: string;
     creator?: string;
+    subject?: Array<string>;
+    description?: string;
+    language?: string;
+    attr_schemaLocation: string;
 };
-
-export type Language = 'ja' | 'jpn';

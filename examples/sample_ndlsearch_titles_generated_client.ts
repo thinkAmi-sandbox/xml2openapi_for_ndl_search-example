@@ -15,7 +15,9 @@ const createXmlClient = () =>
 	);
 
 const fetchTitles = async () => {
-	const query = 'title="桜"';
+	// JetBrains IDE プラグイン開発実践ガイド
+	const query = 'title="JetBrains"';
+	// const query = 'isbn=9784295604167';
 	const client = createXmlClient();
 	const raw = await client.get({
 		url: "/api/sru",
