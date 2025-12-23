@@ -101,7 +101,51 @@ export const convertJsonSchemaToOpenApiDocument = (
 			title: rootName,
 			version: infoVersion,
 		},
-		paths: {},
+		paths: {
+			"/api/sru": {
+				get: {
+					operationId: "getSru",
+					parameters: [
+						{
+							name: "operation",
+							in: "query",
+							required: true,
+							schema: {
+								type: "string",
+							},
+						},
+						{
+							name: "query",
+							in: "query",
+							required: true,
+							schema: {
+								type: "string",
+							},
+						},
+						{
+							name: "maximumRecords",
+							in: "query",
+							required: false,
+							schema: {
+								type: "integer",
+							},
+						},
+					],
+					responses: {
+						"200": {
+							description: "OK",
+							content: {
+								"application/xml": {
+									schema: {
+										$ref: `#/components/schemas/${rootName}`,
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
 		components: {
 			schemas: components,
 		},

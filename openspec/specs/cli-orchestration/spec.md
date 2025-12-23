@@ -11,11 +11,11 @@ TBD - created by archiving change add-xml2dcclient-cli. Update Purpose after arc
 - **THEN** XMLの読み込みからクライアント生成までの処理が順番に実行される
 
 ### Requirement: 中間生成物の非出力
-システムはCLI実行時に中間生成物（JSON, TypeScript, JSON Schema, OpenAPI）をファイル出力しないこと（SHALL）。
+システムはCLI実行時に中間生成物（JSON, TypeScript, JSON Schema）をファイル出力しないこと（SHALL）。
 
 #### Scenario: 中間ファイルの省略
 - **WHEN** `xml2dcclient` を実行する
-- **THEN** 中間生成物のファイルが作成されない
+- **THEN** JSON/TypeScript/JSON Schema のファイルが作成されない
 
 #### Scenario: 旧スクリプトの排除
 - **WHEN** リポジトリのソースを確認する

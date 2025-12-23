@@ -1,5 +1,5 @@
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import { createClient } from "@hey-api/openapi-ts";
 import { convertJsonSchemaToOpenApiDocument } from "../openapi/convertJsonSchemaToOpenApi";
 import { parseXmlToJson } from "../xml/parseXml";
@@ -12,6 +12,7 @@ export type XmlToClientOptions = {
 	rootTypeName?: string;
 	openApiVersion?: string;
 	baseUrl?: string;
+	openApiOutputPath?: string;
 };
 
 const runStep = async <T>(
@@ -33,6 +34,9 @@ export const runXmlToClient = async (options: XmlToClientOptions) => {
 		: resolve("src", "client");
 	const baseUrl = options.baseUrl ?? "https://ndlsearch.ndl.go.jp/api/sru";
 	const openApiVersion = options.openApiVersion ?? "1.0.0";
+	const openApiOutputPath = options.openApiOutputPath
+		? resolve(options.openApiOutputPath)
+		: resolve("openapi", "openapi.json");
 
 	const xml = await runStep("XMLの読み込み", () =>
 		readFileSync(options.xmlPath, "utf-8"),
@@ -51,6 +55,13 @@ export const runXmlToClient = async (options: XmlToClientOptions) => {
 			version: openApiVersion,
 		}),
 	);
+	await runStep("OpenAPIの書き出し", () => {
+		mkdirSync(dirname(openApiOutputPath), { recursive: true });
+		writeFileSync(
+			openApiOutputPath,
+			`${JSON.stringify(openApiDocument, null, 2)}\n`,
+		);
+	});
 
 	await runStep("クライアント生成", async () => {
 		await createClient({

@@ -40,3 +40,23 @@ export type Dc = {
     language?: string;
     attr_schemaLocation: string;
 };
+
+export type GetSruData = {
+    body?: never;
+    path?: never;
+    query: {
+        operation: string;
+        query: string;
+        maximumRecords?: number;
+    };
+    url: '/api/sru';
+};
+
+export type GetSruResponses = {
+    /**
+     * OK
+     */
+    200: SearchRetrieveResponse;
+};
+
+export type GetSruResponse = GetSruResponses[keyof GetSruResponses];

@@ -13,6 +13,7 @@ xml2dcclient <xmlファイルパス>
 - XMLを読み込んでJSONに変換する
 - JSONからTypeScript型定義を生成する
 - TypeScript型定義からJSON SchemaとOpenAPI 3.1を生成する
+- OpenAPI 3.1 ドキュメントを `openapi/openapi.json` に上書き出力する
 - OpenAPIドキュメントから `src/client/` にクライアントを生成する
 - 中間生成物はファイルに保存しない
 

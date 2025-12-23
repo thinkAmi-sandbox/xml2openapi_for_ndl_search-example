@@ -1,5 +1,6 @@
 import { createClient, createConfig } from "../src/client/client";
-import type { SruRecord } from "../src/xml/parseSruXml";
+import { getSru } from "../src/client";
+import type { SearchRetrieveResponse } from "../src/client";
 import { parseSruXml } from "../src/xml/parseSruXml";
 
 const sleep = (ms: number) =>
@@ -7,20 +8,14 @@ const sleep = (ms: number) =>
 		setTimeout(resolve, ms);
 	});
 
-const createXmlClient = () =>
-	createClient(
+const fetchTitles = async () => {
+	const query = 'title="JetBrains"';
+	const client = createClient(
 		createConfig({
 			baseUrl: "https://ndlsearch.ndl.go.jp",
 		}),
 	);
-
-const fetchTitles = async () => {
-	// JetBrains IDE プラグイン開発実践ガイド
-	const query = 'title="JetBrains"';
-	// const query = 'isbn=9784295604167';
-	const client = createXmlClient();
-	const raw = await client.get({
-		url: "/api/sru",
+	const raw = await getSru({
 		query: {
 			operation: "searchRetrieve",
 			maximumRecords: 10,
@@ -28,14 +23,9 @@ const fetchTitles = async () => {
 		},
 		parseAs: "text",
 		responseStyle: "data",
+		client,
 	});
-	const data = parseSruXml(String(raw)) as {
-		searchRetrieveResponse?: {
-			records?: {
-				record?: SruRecord[];
-			};
-		};
-	};
+	const data = parseSruXml(String(raw)) as SearchRetrieveResponse;
 
 	const records = data.searchRetrieveResponse?.records?.record ?? [];
 	const titles = records

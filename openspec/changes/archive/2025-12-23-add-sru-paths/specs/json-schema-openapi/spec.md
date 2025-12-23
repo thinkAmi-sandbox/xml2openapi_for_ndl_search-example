@@ -1,8 +1,4 @@
-# json-schema-openapi Specification
-
-## Purpose
-TBD - created by archiving change add-json-schema-openapi. Update Purpose after archive.
-## Requirements
+## MODIFIED Requirements
 ### Requirement: JSON Schema から OpenAPI 3.1 への変換
 システムは JSON Schema 2020-12 を OpenAPI 3.1 の Schema Object として直接取り込み、OpenAPI 3.1 形式のドキュメントを構成しなければならない（SHALL）。
 
@@ -38,6 +34,7 @@ TBD - created by archiving change add-json-schema-openapi. Update Purpose after 
 - **WHEN** 変換が完了する
 - **THEN** `openapi/openapi.json` が上書きされる
 
+## ADDED Requirements
 ### Requirement: SRUパスの固定定義
 システムは OpenAPI 3.1 ドキュメントの `paths` に `/api/sru` のGETエンドポイントを定義しなければならない（SHALL）。
 
@@ -58,4 +55,3 @@ TBD - created by archiving change add-json-schema-openapi. Update Purpose after 
 #### Scenario: レスポンス定義
 - **WHEN** `/api/sru` のレスポンス仕様を確認する
 - **THEN** 200レスポンスの `application/xml` が定義されている
-
