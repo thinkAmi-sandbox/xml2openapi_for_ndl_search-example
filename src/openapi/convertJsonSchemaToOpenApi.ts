@@ -1,10 +1,20 @@
-import { convertSync } from "@openapi-contrib/json-schema-to-openapi-schema";
-
 type JsonObject = Record<string, unknown>;
 
 type ConvertOptions = {
 	title?: string;
 	version?: string;
+};
+
+const rewriteRef = (ref: string): string => {
+	if (ref.startsWith("#/$defs/")) {
+		const defName = ref.slice("#/$defs/".length);
+		return `#/components/schemas/${defName}`;
+	}
+	if (ref.startsWith("#/definitions/")) {
+		const defName = ref.slice("#/definitions/".length);
+		return `#/components/schemas/${defName}`;
+	}
+	return ref;
 };
 
 const normalizeRefs = (value: unknown): unknown => {
@@ -21,9 +31,7 @@ const normalizeRefs = (value: unknown): unknown => {
 
 	for (const [key, entry] of entries) {
 		if (key === "$ref" && typeof entry === "string") {
-			normalized[key] = entry
-				.replace("#/$defs/", "#/components/schemas/")
-				.replace("#/definitions/", "#/components/schemas/");
+			normalized[key] = rewriteRef(entry);
 			continue;
 		}
 
@@ -33,13 +41,21 @@ const normalizeRefs = (value: unknown): unknown => {
 	return normalized;
 };
 
-const extractDefs = (schema: JsonObject): JsonObject => {
+const extractDefs = (schema: JsonObject): Record<string, JsonObject> => {
 	const defs = schema.$defs ?? schema.definitions;
 	if (!defs || typeof defs !== "object") {
 		return {};
 	}
 
-	return defs as JsonObject;
+	const entries = Object.entries(defs as Record<string, unknown>);
+	const result: Record<string, JsonObject> = {};
+	for (const [name, value] of entries) {
+		if (value && typeof value === "object") {
+			result[name] = value as JsonObject;
+		}
+	}
+
+	return result;
 };
 
 const stripRootMeta = (schema: JsonObject): JsonObject => {
@@ -65,32 +81,19 @@ export const convertJsonSchemaToOpenApiDocument = (
 			? schema.title
 			: (options.title ?? "RootSchema");
 	const infoVersion = options.version ?? "1.0.0";
+	const rootSchema = normalizeRefs(stripRootMeta(schema)) as JsonObject;
+
+	if (!rootSchema.title) {
+		rootSchema.title = rootName;
+	}
 
 	const defs = extractDefs(schema);
-	const rootSchema = stripRootMeta(schema);
-	const convertedRoot = convertSync(rootSchema, {
-		cloneSchema: true,
-	}) as unknown as JsonObject;
-
-	if (!convertedRoot.title) {
-		convertedRoot.title = rootName;
+	const components: Record<string, JsonObject> = {};
+	for (const [name, value] of Object.entries(defs)) {
+		components[name] = normalizeRefs(value) as JsonObject;
 	}
 
-	const components: JsonObject = {};
-	for (const [name, definition] of Object.entries(defs)) {
-		if (!definition || typeof definition !== "object") {
-			continue;
-		}
-
-		const converted = convertSync(definition, {
-			cloneSchema: true,
-		}) as unknown as JsonObject;
-		components[name] = converted;
-	}
-
-	components[rootName] = convertedRoot;
-
-	const normalizedComponents = normalizeRefs(components) as JsonObject;
+	components[rootName] = rootSchema;
 
 	return {
 		openapi: "3.1.0",
@@ -100,7 +103,7 @@ export const convertJsonSchemaToOpenApiDocument = (
 		},
 		paths: {},
 		components: {
-			schemas: normalizedComponents,
+			schemas: components,
 		},
 	};
 };

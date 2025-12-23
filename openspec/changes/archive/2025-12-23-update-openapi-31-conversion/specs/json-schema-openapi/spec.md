@@ -1,8 +1,4 @@
-# json-schema-openapi Specification
-
-## Purpose
-TBD - created by archiving change add-json-schema-openapi. Update Purpose after archive.
-## Requirements
+## MODIFIED Requirements
 ### Requirement: JSON Schema から OpenAPI 3.1 への変換
 システムは JSON Schema 2020-12 を OpenAPI 3.1 の Schema Object として直接取り込み、OpenAPI 3.1 形式のドキュメントを構成しなければならない（SHALL）。
 
@@ -37,4 +33,3 @@ TBD - created by archiving change add-json-schema-openapi. Update Purpose after 
 #### Scenario: メモリ受け渡し
 - **WHEN** 変換が完了する
 - **THEN** ファイル出力は行わず、メモリ上で保持される
-

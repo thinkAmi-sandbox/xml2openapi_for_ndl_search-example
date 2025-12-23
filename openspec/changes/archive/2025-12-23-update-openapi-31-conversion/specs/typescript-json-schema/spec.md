@@ -1,8 +1,4 @@
-# typescript-json-schema Specification
-
-## Purpose
-TBD - created by archiving change add-typescript-json-schema. Update Purpose after archive.
-## Requirements
+## MODIFIED Requirements
 ### Requirement: typia によるスキーマ生成
 システムはメモリ上の TypeScript 型定義を入力として typia で OpenAPI v3.1 互換のスキーマコレクションを生成しなければならない（SHALL）。
 
@@ -37,4 +33,3 @@ TBD - created by archiving change add-typescript-json-schema. Update Purpose aft
 #### Scenario: 2020-12 互換
 - **WHEN** JSON Schemaを生成する
 - **THEN** OpenAPI 3.1 でそのまま取り込める形式になる
-

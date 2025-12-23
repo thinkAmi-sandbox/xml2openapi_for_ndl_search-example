@@ -7,7 +7,6 @@
 	},
 	"dependencies": {
 		"@hey-api/openapi-ts": "^0.89.2",
-		"@openapi-contrib/json-schema-to-openapi-schema": "^4.3.0",
 		"commander": "^14.0.2",
 		"fast-xml-parser": "^5.3.3",
 		"quicktype-core": "^23.2.6",

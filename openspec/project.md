@@ -24,7 +24,7 @@ XMLを返すAPIに対して、以下を行えるツールを作成する
   - TypeScriptの型定義 → JSON Schema
     - typia（OpenAPI v3.1 互換スキーマコレクションの生成）
   - JSON Schema → OpenAPIスキーマ 3.1
-    - @openapi-contrib/json-schema-to-openapi-schema
+    - JSON Schema 2020-12 を OpenAPI 3.1 の Schema Object として直接取り込む
 - CLIとして実行可能にする
   - `xml2openapi <ベースとなるXMLファイル>` というイメージ
     - commander.js を利用する
