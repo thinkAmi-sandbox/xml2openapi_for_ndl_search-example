@@ -1,0 +1,37 @@
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/">
+    <version>1.2</version>
+    <numberOfRecords>5</numberOfRecords>
+    <extraResponseData> <facets> <lst name="REPOSITORY_NO"> <int name="R100000136">4</int> <int name="R100000137">1</int> </lst> <lst name="NDC"> </lst> <lst name="ISSUED_DATE"> </lst> <lst name="LIBRARY"> </lst> </facets> </extraResponseData>
+    <records>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>JetBrains IDE プラグイン開発実践ガイド</dc:title> <dc:creator>thinkAmi 著・文・その他</dc:creator> <dc:subject>IDE</dc:subject><dc:subject>開発環境</dc:subject><dc:subject>JetBrains</dc:subject><dc:subject>プラグイン</dc:subject><dc:subject>プラグイン開発</dc:subject><dc:subject>同人誌</dc:subject><dc:subject>技術同人誌</dc:subject><dc:subject>技術書典</dc:subject> <dc:description>文芸</dc:description> <dc:language>jpn</dc:language> </srw_dc:dc> </recordData>
+            <recordPosition>1</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>IntelliJ IDEA</dc:title> </srw_dc:dc> </recordData>
+            <recordPosition>2</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>IntelliJ IDEA</dc:title> </srw_dc:dc> </recordData>
+            <recordPosition>3</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>Meta Programming System</dc:title> </srw_dc:dc> </recordData>
+            <recordPosition>4</recordPosition>
+        </record>
+        <record>
+            <recordSchema>info:srw/schema/1/dc-v1.1</recordSchema>
+            <recordPacking>string</recordPacking>
+            <recordData> <srw_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:srw_dc="info:srw/schema/1/dc-v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:srw/schema/1/dc-v1.1 http://www.loc.gov/standards/sru/dc-schema.xsd"> <dc:title>Meta Programming System</dc:title> </srw_dc:dc> </recordData>
+            <recordPosition>5</recordPosition>
+        </record>
+    </records>
+</searchRetrieveResponse>
